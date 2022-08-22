@@ -26,8 +26,8 @@ public class ReverseString {
 
 
     public static void main(String[] args) {
-        //System.out.println(reverseStrings("test"));
-        //System.out.println(withReverseFunc("test"));
+        System.out.println(reverseStrings("test"));
+        System.out.println(withReverseFunc("test"));
         System.out.println(recursiveReverse("test"));
     }
 }
