@@ -32,6 +32,12 @@ public class LinkedList {
             append(value);
         }
 
+        if (index >= length){
+            System.out.println("You entered an invalid index, please try again. Now, current list is below");
+            printList();
+            return;
+        }
+
         LinkedNode leader = traverseToIndex(index - 1);
         LinkedNode nextNode = leader.getNext();
 
@@ -43,6 +49,11 @@ public class LinkedList {
     public void remove(int index){
         if (index == 0){
             head = head.getNext();
+        }
+
+        if (index == length){
+            System.out.println("You entered an invalid index");
+            return;
         }
 
         if (index > length){
@@ -71,7 +82,7 @@ public class LinkedList {
         head = first;
     }
 
-    private LinkedNode traverseToIndex(int index) {
+    public LinkedNode traverseToIndex(int index) {
         LinkedNode currentNode = head;
         for (int i = 0; i < index; i++){
             currentNode = currentNode.getNext();
