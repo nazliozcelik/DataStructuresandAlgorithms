@@ -8,9 +8,6 @@ public class StackWithArray {
 
     List<Integer> arr = new ArrayList<>();
 
-    public StackWithArray() {
-    }
-
     public int peak(){
         if (arr.size() == 0){
             throw new EmptyStackException();
